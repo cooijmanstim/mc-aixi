@@ -21,6 +21,7 @@
 #include "tictactoe.hpp"
 #include "tiger.hpp"
 #include "extendedtiger.hpp"
+#include "external-environment.hpp"
 
 
 // Stream for logging
@@ -254,6 +255,8 @@ int main(int argc, char *argv[]) {
 		env = new TicTacToe(options);
 	} else if (environment_name == "tiger") {
  		env = new Tiger(options);
+	} else if (environment_name == "external-environment") {
+		env = new ExternalEnvironment(options);
  	} else {
 		std::cerr << "ERROR: unknown environment '" << environment_name << "'"
 		    << std::endl;
