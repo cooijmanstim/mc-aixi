@@ -211,7 +211,7 @@ These options configure the agent, particularly the effort it puts into searchin
 \subsection{Environment configuration}
 These options specify general environment properties. See the subsections for options which apply to specific environments.
 \begin{itemize}
-\item {\bf environment:} Determines which environment the agent will interact with. {\em Valid values:} coin-flip, extended-tiger, kuhn-poker, maze, pacman, rock-paper-scissors, tictactoe, tiger.
+\item {\bf environment:} Determines which environment the agent will interact with. {\em Valid values:} coin-flip, extended-tiger, kuhn-poker, maze, pacman, rock-paper-scissors, tictactoe, tiger, external-environment.
 
 \item {\bf action-bits/observation-bits/percept-bits/reward-bits:} Specifies the maximum number of bits needed to encode an action/observation/percept/reward. These are set by the environment when it is created.
 
@@ -268,6 +268,13 @@ The maze environment represents a maze through which the agent must navigate. Co
 \item {\bf tiger-listen-accuracy:} The probability that listening for the tiger will correctly identify which door the tiger is behind. {\em Default value:} 0.85. {\em Valid values:} Decimal values between 0.0 and 1.0 inclusive.
 \end{itemize}
 
+
+\subsubsection{External environment:}
+\begin{itemize}
+\item {\bf external-environment-host:} The address of the host that runs the actual environment.
+\item {\bf external-environment-port:} The port to connect to.
+\item {\bf external-environment-max-action/external-environment-max-observation/external-environment-max-reward:} Actions, observations, and rewards are passed between the agent and environment as nonnegative integers. These options specify the maximum action that can be sent to the environment and the maximum observation/reward that can be received from the environment.
+\end{itemize}
 
 
 \subsection{Miscellaneous}
